@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import { url } from "../utils/config";
 
 export default function Main() {
   return (
@@ -24,7 +25,7 @@ export default function Main() {
               </div>
               <div className="col text-center">
                 <span className="m-4 mx-auto">
-                  <img src="/logo_250.png"></img>
+                  <img src={url("/logo_250.png")}></img>
                 </span>
               </div>
               <div className="col text-end">
