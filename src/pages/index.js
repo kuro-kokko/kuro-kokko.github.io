@@ -28,7 +28,9 @@ export default function Main() {
                 </span>
               </div>
               <div className="col text-end">
-                <span class="my-4 mx-2 material-symbols-outlined">help</span>
+                <span className="my-4 mx-2 material-symbols-outlined">
+                  help
+                </span>
                 <div className="m-4 material-symbols-outlined">
                   account_circle
                 </div>
