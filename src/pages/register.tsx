@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import { url } from "../utils/config";
+import { fixUrl } from "../utils/config";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/router";
@@ -123,7 +123,7 @@ export default function Register() {
             <div className="col text-center">
               <span className="m-4 mx-auto">
                 <Link href="/">
-                  <img src={url("/logo_250.png")} className="front"></img>
+                  <img src={fixUrl("/logo_250.png")} className="front"></img>
                 </Link>
               </span>
             </div>
