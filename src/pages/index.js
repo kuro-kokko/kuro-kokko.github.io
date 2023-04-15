@@ -1,8 +1,47 @@
 import Head from "next/head";
 import Link from "next/link";
 import { fixUrl } from "../utils/config";
+import styled, { keyframes } from "styled-components";
 
 export default function Main() {
+  const fadeIn = keyframes`
+    0% {
+      opacity: 0;
+      filter: blur(0.7px);
+    }
+    20% {
+      opacity: 1;
+    }
+    70% {
+      filter: blur(1px);
+    }
+    85% {
+      opacity: 0;
+      transform: scale(1.2);
+    }
+    100% {
+      z-index: 0;
+      opacity: 0;
+    }
+  `;
+
+  const Slide = styled.div`
+    &:first-of-type {
+      background-image: url("/1.png");
+      animation-name: ${fadeIn};
+    }
+    &:nth-of-type(2) {
+      background-image: url("/2.png");
+      animation-name: ${fadeIn};
+      animation-delay: 6s;
+    }
+    &:last-of-type {
+      background-image: url("/3.png");
+      animation-name: ${fadeIn};
+      animation-delay: 12s;
+    }
+  `;
+
   return (
     <>
       <Head>
@@ -16,6 +55,7 @@ export default function Main() {
           rel="stylesheet"
         ></link>
       </Head>
+      <Slide></Slide>
       <div className="container">
         <div className="content text-light">
           <div className="gradient pb-4">
