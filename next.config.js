@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 
-const urlPrefix = "/202303_kadai";
+const urlPrefix = "";
 
 const nextConfig = {
   reactStrictMode: true,
